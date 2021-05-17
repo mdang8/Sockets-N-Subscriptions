@@ -33,18 +33,18 @@ Create an `env.ini` file in the project root directory with the following struct
 
 ### List all the available topics you can subscribe to with your current configs:
 ```bash
-python main.py --list-topics
+python sockets_n_subscriptions.py --list-topics
 ```
 
 ### Create a new subscription and listen for messages:
 ```bash
-python main.py --subscribe <SUBSCRIPTION_ENDPOINT>
+python sockets_n_subscriptions.py --subscribe <SUBSCRIPTION_ENDPOINT>
 ```
 - `SUBSCRIPTION_ENDPOINT` is the endpoint you are subscribing to the SNS topic. This will be where notifications are "sent" to and it will need to be a publicly exposed endpoint. For local use, [ngrok](https://ngrok.com/) or something similar will work.
 
 ### Only listen for messages:
 _* requires a subscription to have already been created_
 ```bash
-python main.py --listen
+python sockets_n_subscriptions.py --listen
 ```
 - Currently set to listen on localhost port `9081`
